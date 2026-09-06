@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10b981" />
+    <meta
+      name="description"
+      content="HabitFlow — превратите полезные привычки в игру: численные цели, прогресс-бары и награды за серии."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://habitflow.vercel.app/" />
+    <!-- Open Graph / Twitter (соцсети) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HabitFlow" />
+    <meta property="og:title" content="HabitFlow — привычки в измеримый прогресс" />
+    <meta
+      property="og:description"
+      content="Численные цели, прогресс-бары, серии и награды. Тарифы — от Free до Premium с интеграцией Google Calendar."
+    />
+    <meta property="og:url" content="https://habitflow.vercel.app/" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="HabitFlow — привычки в измеримый прогресс" />
+    <meta
+      name="twitter:description"
+      content="Превратите полезные привычки в игру: численные цели, прогресс-бары и награды за серии."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2310B981'/%3E%3Cpath d='M25 60l15-20 12 14 10-24 13 30' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>HabitFlow — привычки в измеримый прогресс</title>
+
+    <!--
+      Яндекс.Метрика.
+      В проде: регистрируем счётчик на metrika.yandex.ru, подставляем
+      реальный ID в МЕТРИКА_ID ниже и оставляем реальный сниппет mc.yandex.ru.
+      Здесь — локальная отладочная реализация, которая пишет цели в
+      window.__METRIKA_HITS__ и console. Цели создаются на metrika.yandex.ru
+      как «JavaScript-события» с такими же названиями:
+      registration, pricing-view, payment, create-habit, habit-checkin,
+      visit_duration + data-metrica="goal:...".
+    -->
+    <script>
+      (function () {
+        var METRIKA_ID = 98765432;
+        window.__METRIKA_HITS__ = [];
+        window.ym = function (counterId, action) {
+          if (!counterId || action === "init") return;
+          var label = String(arguments[2] ?? "").replace(/^goal:/, "");
+          if (!label) return;
+          window.__METRIKA_HITS__.push({
+            at: new Date().toISOString(),
+            counterId: counterId,
+            goal: label,
+          });
+          if (window.console) console.info("[metrica] цель:", label);
+        };
+        // Клики по элементам data-metrica="goal:..." — цель Метрики
+        document.addEventListener("click", function (event) {
+          var el = event.target.closest
+            ? event.target.closest("[data-metrica^='goal:']")
+            : null;
+          if (el) {
+            window.ym(METRIKA_ID, "reachGoal", el.getAttribute("data-metrica"));
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
