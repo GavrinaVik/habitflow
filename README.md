@@ -6,6 +6,9 @@ SaaS-приложение для трекинга привычек с гейми
 
 friendly-crisp-4b0214.netlify.app
 
+<img width="1567" height="1057" alt="изображение" src="https://github.com/user-attachments/assets/9df94e08-a6ab-4906-8eef-b4c9f3d26ff5" />
+
+
 ---
 
 ## 1. Описание проекта
