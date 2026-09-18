@@ -5,6 +5,8 @@ SaaS-приложение для трекинга привычек с гейми
 Демо: фронтенд и API запускаются локально (см. «Установка и запуск»). Вся бизнес-логика покрыта интеграциями-моками (платежи ЮKassa, письма Unisender, Google Calendar, публикации в соцсети), которые легко заменить на реальные сервисы через переменные окружения.
 
 friendly-crisp-4b0214.netlify.app
+<img width="1837" height="1281" alt="изображение" src="https://github.com/user-attachments/assets/d5791076-af16-40c8-8265-29cd0c96c69a" />
+
 
 <img width="1567" height="1057" alt="изображение" src="https://github.com/user-attachments/assets/9df94e08-a6ab-4906-8eef-b4c9f3d26ff5" />
 
